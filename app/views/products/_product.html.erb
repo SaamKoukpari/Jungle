@@ -20,4 +20,11 @@
   <aside class="price">
     <%= number_to_currency(product.price, precision: 2) %>
   </aside>
+
+  <% if product.quantity < 1 %>
+    <aside class="soldoutBadge">
+      SOLD OUT!
+    </aside>
+  <% end %>
+
 </article>
