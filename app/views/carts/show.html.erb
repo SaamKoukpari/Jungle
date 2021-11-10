@@ -1,3 +1,9 @@
+<% if enhanced_cart.length < 1 %>
+  <div class="alert alert-warning" role="alert">
+    Looks like your cart is empty! Please add an item to your cart before checking out. 
+  </div>
+  <a class="btn btn-light" href="/">Back to Shopping</a>
+<% else %> 
 <section class="cart-show">
 
   <header class="page-header">
@@ -50,3 +56,5 @@
   </div>
 
 </section>
+
+<% end %>
