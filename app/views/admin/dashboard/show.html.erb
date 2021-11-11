@@ -1,2 +1,21 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<h1>Admin &raquo; Dashboard</h1>
+<table class="table table-striped table-dark"
+  <thead>
+    <tr>
+      <th scope="col">Number of Products</th>
+      <th scope="col">Number of Categories</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <%= @products.length %> 
+      </td>
+      <td>
+        <%= @categories.length %>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to "To Admin Products Index", admin_products_path(@products), class: 'btn btn-light' %>
