@@ -20,7 +20,7 @@ RSpec.feature "ProductDetails", type: :feature, js: true do
   scenario 'Users can navigate from the home page to the product detail page by clicking on a product.' do
     #ACT 
     visit root_path
-    first(".product").click_link("Details »")
+    click_link("Details »", match: :first)
 
     #VERIFY
     expect(page).to have_content("Quantity")
