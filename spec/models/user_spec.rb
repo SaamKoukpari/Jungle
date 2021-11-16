@@ -36,7 +36,7 @@ RSpec.describe User, type: :model do
       expect(User.authenticate_with_credentials("shaanip@hotmail.com", "password")).to be_present
     end
 
-    it 'should not authentica the user if the email is incorrect' do
+    it 'should not authenticate the user if the email is incorrect' do
       @user = User.new(name: "Shaan", email:"shaanip@hotmail.com", password: "password", password_confirmation: "password") 
       @user.save
       expect(User.authenticate_with_credentials("donny_robert@msn.com", "password")).not_to be_present
