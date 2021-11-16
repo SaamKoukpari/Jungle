@@ -22,11 +22,10 @@ RSpec.feature "AddToCarts", type: :feature, js: true do
     expect(page).to have_content("My Cart (0)")
     first(".product").click_button("Add")
 
-    #DEBUG
-    save_screenshot
-
     #VERIFY
     expect(page).to have_content("My Cart (1)")
-
+    
+    #DEBUG
+    save_screenshot
   end
 end
