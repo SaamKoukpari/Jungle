@@ -14,7 +14,7 @@ RSpec.describe User, type: :model do
       expect(@user.errors.full_messages).to include("Password confirmation doesn't match Password")
     end
 
-    it "Should fail to create a user if email is not unique and it should not be case sensitive" do
+    it "Should fail to create a user if email is taken and it should not be case sensitive" do
       @user = User.new(name: "Shaan", email:"shaanip@hotmail.com", password: "password", password_confirmation: "password") 
       @user.save
       @user2 = User.new(name: "Shaan", email:"SHAANIP@hotmail.com", password: "password", password_confirmation: "password") 
